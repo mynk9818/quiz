@@ -15,15 +15,19 @@ class QuestionSummary extends StatelessWidget {
           children: summaryData.map((data) {
             return Row(
               children: [
-                Text(((data.questionIndex) + 1).toString()),
+                Text(((data.questionIndex) + 1).toString(),
+                    style: const TextStyle(color: Colors.white)),
                 Expanded(
                   child: Column(
                     children: [
-                      Text(data.question),
+                      Text(data.question,
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 128, 187, 189))),
                       const SizedBox(
                         height: 5,
                       ),
-                      Text(data.correctAnswer)
+                      Text(data.correctAnswer,
+                          style: const TextStyle(color: Colors.white))
                     ],
                   ),
                 )
